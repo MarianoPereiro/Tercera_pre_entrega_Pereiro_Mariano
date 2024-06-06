@@ -1,0 +1,24 @@
+{% extends 'PadreCorto.html' %}
+
+
+
+{% block contenidoquecambia %}
+<body>
+    <style>
+        .container{display: flex;
+            justify-content: center;
+            align-items: center;}
+    </style>
+<div class="container">
+
+        <h2>Agregar Vehículo</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+</body>
+{% endblock contenidoquecambia %}
+
+

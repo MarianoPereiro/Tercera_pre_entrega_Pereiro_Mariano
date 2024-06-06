@@ -1,0 +1,15 @@
+{% extends 'Padre.html' %}
+
+{% block title %}Resultados de Búsqueda{% endblock %}
+
+{% block content %}
+<h2>Resultados de Búsqueda para "{{ query }}"</h2>
+<ul>
+    {% for result in results %}
+        <li>{{ result.marca }} {{ result.modelo }} ({{ result.año }}) - ${{ result.precio }}</li>
+    {% empty %}
+        <li>No se encontraron resultados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
